@@ -154,7 +154,7 @@ html,
   -o-tab-size: 4;
      tab-size: 4;
   /* 3 */
-  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "SUIT Variable", sans-serif;
   /* 4 */
   font-feature-settings: normal;
   /* 5 */
@@ -588,6 +588,10 @@ abbr[title] {
   }
 }
 
+.m-8 {
+  margin: 2rem;
+}
+
 .my-10 {
   margin-top: 2.5rem;
   margin-bottom: 2.5rem;
@@ -700,6 +704,10 @@ abbr[title] {
   padding: 1.5rem;
 }
 
+.font-sans {
+  font-family: "SUIT Variable", sans-serif;
+}
+
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
@@ -747,11 +755,29 @@ abbr[title] {
   color: #bbaf83;
 }
 
-.text-pesto-900 {
-  color: #1c180a;
+/* base 스타일 재구성 */
+
+body {
+  background: #0f172a;
 }
 
-/* base 스타일 재구성 */
+@media (min-width: 640px) {
+  body {
+    background: #334155;
+  }
+}
+
+@media (min-width: 768px) {
+  body {
+    background: #64748b;
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    background: #e2e8f0;
+  }
+}
 
 /* 스타일 재사용 */
 
@@ -806,14 +832,9 @@ abbr[title] {
     margin-bottom: calc(1rem * var(--tw-space-y-reverse));
   }
   .avatar-card__caption {
-    strong {
-      font-size: 1.875rem;
-      line-height: 2.25rem;
-    }
-    strong {
-      --tw-text-opacity: 1;
-      color: rgb(55 65 81 / var(--tw-text-opacity));
-    }
+    /* strong {
+      @apply text-3xl text-gray-700;
+    } */
     p {
       font-size: 1.125rem;
       line-height: 1.75rem;

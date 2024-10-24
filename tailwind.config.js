@@ -2,7 +2,13 @@
 module.exports = {
   content: ["./**/*.html"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ['"SUIT Variable"', "sans-serif"],
+        pretendard: ["Pretendard Variable", "sans-serif"],
+        "noto-serif": ["Noto Serif KR", "serif"],
+      },
+    },
   },
   plugins: [],
 };
