@@ -1,3 +1,126 @@
+/* base 스타일 재구성 */
+
+body {
+  background: #0f172a;
+}
+
+@media (min-width: 640px) {
+  body {
+    background: #334155;
+  }
+}
+
+@media (min-width: 768px) {
+  body {
+    background: #64748b;
+  }
+}
+
+@media (min-width: 950px) {
+  body {
+    background: #e2e8f0;
+  }
+}
+
+/* 스타일 재사용 */
+
+.avatar-card {
+  display: flex;
+  width: 290px;
+  flex-direction: column;
+  gap: 1.5rem;
+  border-radius: 0.6833604574203491rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  padding: 1.5rem;
+  --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+@media (min-width: 768px) {
+  .avatar-card {
+    display: grid;
+    width: 500px;
+    grid-template-columns: 120px 1fr;
+  }
+}
+
+.avatar-card {
+  .avatar-card__image {
+    height: 6rem;
+  }
+  .avatar-card__image {
+    width: 6rem;
+  }
+  .avatar-card__image {
+    align-self: center;
+  }
+  .avatar-card__image {
+    border-radius: 9999px;
+  }
+  .avatar-card__image:hover {
+    border-width: 4px;
+  }
+  .avatar-card__image:hover {
+    border-style: solid;
+  }
+  .avatar-card__image:hover {
+    --tw-border-opacity: 1;
+    border-color: rgb(161 98 7 / var(--tw-border-opacity));
+  }
+  .avatar-card__caption > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(1rem * var(--tw-space-y-reverse));
+  }
+  .avatar-card__caption {
+    strong {
+      font-size: 1.5rem;
+    }
+    strong {
+      --tw-text-opacity: 1;
+      color: rgb(55 65 81 / var(--tw-text-opacity));
+    }
+    p {
+      font-size: 1.125rem;
+    }
+    a {
+      display: inline-block;
+    }
+    a {
+      font-weight: 700;
+    }
+    a {
+      --tw-text-opacity: 1;
+      color: rgb(8 145 178 / var(--tw-text-opacity));
+    }
+    a:focus {
+      border-radius: 0.1875rem;
+    }
+    a:focus {
+      outline: 2px solid transparent;
+      outline-offset: 2px;
+    }
+    a:focus {
+      --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+      --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+      box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+    }
+    a:focus {
+      --tw-ring-opacity: 1;
+      --tw-ring-color: rgb(161 98 7 / var(--tw-ring-opacity));
+    }
+    a:focus {
+      --tw-ring-offset-width: 2px;
+    }
+    a:active {
+      --tw-text-opacity: 1;
+      color: rgb(239 68 68 / var(--tw-text-opacity));
+    }
+  }
+}
+
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -106,9 +229,7 @@
   --tw-contain-style:  ;
 }
 
-/*
-! tailwindcss v3.4.14 | MIT License | https://tailwindcss.com
-*/
+/* ! tailwindcss v3.4.14 | MIT License | https://tailwindcss.com */
 
 /*
 1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
@@ -154,7 +275,7 @@ html,
   -o-tab-size: 4;
      tab-size: 4;
   /* 3 */
-  font-family: "SUIT Variable", sans-serif;
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   /* 4 */
   font-feature-settings: normal;
   /* 5 */
@@ -554,6 +675,63 @@ video {
   display: none;
 }
 
+/* SUIT Variable */
+
+@font-face {
+  font-family: "SUIT Variable";
+
+  font-weight: 100 900;
+
+  src: url("/src/assets/font/suit/SUIT-Variable.woff2") format("woff2-variations");
+}
+
+/* Pretendard Font */
+
+@font-face {
+  font-family: "Pretendard Variable";
+
+  font-weight: 45 920;
+
+  font-style: normal;
+
+  font-display: swap;
+
+  src: url("/src/assets/font/pretendard/woff2/PretendardVariable.woff2") format("woff2-variations");
+}
+
+/* Noto Serif Font */
+
+@font-face {
+  font-family: "Noto Serif KR";
+
+  font-style: normal;
+
+  font-weight: 100;
+
+  src: local("Noto Serif CJK KR"), local("Source Han Serif K"), local("Source Han Serif"), local("Noto Serif CJK"), local("Noto Serif"), url(/src/assets/font/notoserif/web/NotoSerifCJKkr-ExtraLight-subset.woff) format("woff"), url(/src/assets/font/notoserif/web/NotoSerifCJKkr-ExtraLight-subset.woff2) format("woff2"), url(/src/assets/font/notoserif/web/NotoSerifCJKkr-ExtraLight-subset.otf) format("otf");
+}
+
+@font-face {
+  font-family: "Noto Serif KR";
+
+  font-style: normal;
+
+  font-weight: 300;
+
+  src: local("Noto Serif CJK KR"), local("Source Han Serif K"), local("Source Han Serif"), local("Noto Serif CJK"), local("Noto Serif"), url(/src/assets/font/notoserif/web/NotoSerifCJKkr-Regular-subset.woff) format("woff"), url(/src/assets/font/notoserif/web/NotoSerifCJKkr-Regular-subset.woff2) format("woff2"), url(/src/assets/font/notoserif/web/NotoSerifCJKkr-Regular-subset.otf) format("otf"), url(/src/assets/font/notoserif/web/NotoSerifCJKkr-Regular-subset.ttf) format("truetype"),
+      /* Safari, Android, iOS */;
+}
+
+@font-face {
+  font-family: "Noto Serif KR";
+
+  font-style: normal;
+
+  font-weight: 600;
+
+  src: local("Noto Serif CJK KR"), local("Source Han Serif K"), local("Source Han Serif"), local("Noto Serif CJK"), local("Noto Serif"), url(/src/assets/font/notoserif/web/NotoSerifCJKkr-Bold-subset.woff) format("woff"), url(/src/assets/font/notoserif/web/NotoSerifCJKkr-Bold-subset.woff2) format("woff2"), url(/src/assets/font/notoserif/web/NotoSerifCJKkr-Bold-subset.otf) format("otf");
+}
+
 button {
   cursor: pointer;
 }
@@ -568,7 +746,7 @@ abbr[title] {
 }
 
 .button {
-  border-radius: 0.5rem;
+  border-radius: 0.3125rem;
   --tw-bg-opacity: 1;
   background-color: rgb(51 65 85 / var(--tw-bg-opacity));
   padding-left: 1rem;
@@ -588,13 +766,30 @@ abbr[title] {
   }
 }
 
+.col-span-1 {
+  grid-column: span 1 / span 1;
+}
+
 .m-8 {
   margin: 2rem;
+}
+
+.m-10 {
+  margin: 2.5rem;
 }
 
 .my-10 {
   margin-top: 2.5rem;
   margin-bottom: 2.5rem;
+}
+
+.my-5 {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.box-border {
+  box-sizing: border-box;
 }
 
 .block {
@@ -609,6 +804,10 @@ abbr[title] {
   display: flex;
 }
 
+.grid {
+  display: grid;
+}
+
 .h-20 {
   height: 5rem;
 }
@@ -619,6 +818,10 @@ abbr[title] {
 
 .h-screen {
   height: 100vh;
+}
+
+.h-32 {
+  height: 8rem;
 }
 
 .w-1\/2 {
@@ -637,8 +840,32 @@ abbr[title] {
   width: 290px;
 }
 
+.w-64 {
+  width: 16rem;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.flex-1 {
+  flex: 1 1 0%;
+}
+
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.flex-row-reverse {
+  flex-direction: row-reverse;
+}
+
 .flex-col {
   flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
 }
 
 .items-center {
@@ -649,12 +876,32 @@ abbr[title] {
   justify-content: center;
 }
 
+.justify-between {
+  justify-content: space-between;
+}
+
 .gap-4 {
   gap: 1rem;
 }
 
 .gap-6 {
   gap: 1.5rem;
+}
+
+.gap-1 {
+  gap: 0.25rem;
+}
+
+.gap-3 {
+  gap: 0.75rem;
+}
+
+.gap-2 {
+  gap: 0.5rem;
+}
+
+.gap-8 {
+  gap: 2rem;
 }
 
 .space-y-4 > :not([hidden]) ~ :not([hidden]) {
@@ -668,11 +915,23 @@ abbr[title] {
 }
 
 .rounded-2xl {
-  border-radius: 1rem;
+  border-radius: 0.6833604574203491rem;
 }
 
 .rounded-full {
   border-radius: 9999px;
+}
+
+.rounded-lg {
+  border-radius: 0.3125rem;
+}
+
+.rounded-xl {
+  border-radius: 0.4375rem;
+}
+
+.border-4 {
+  border-width: 4px;
 }
 
 .bg-cyan-200 {
@@ -700,22 +959,68 @@ abbr[title] {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.bg-slate-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(203 213 225 / var(--tw-bg-opacity));
+}
+
+.bg-primary-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(34 190 97 / var(--tw-bg-opacity));
+}
+
+.bg-slate-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(71 85 105 / var(--tw-bg-opacity));
+}
+
+.bg-violet-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(196 181 253 / var(--tw-bg-opacity));
+}
+
+.fill-primary-300 {
+  fill: #22be61;
+}
+
 .p-6 {
   padding: 1.5rem;
 }
 
+.p-4 {
+  padding: 1rem;
+}
+
+.p-5 {
+  padding: 1.25rem;
+}
+
 .font-sans {
-  font-family: "SUIT Variable", sans-serif;
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.font-suit {
+  font-family: SUIT Variable, sans-serif;
+}
+
+.font-pretendard {
+  font-family: Pretendard Variable, sans-serif;
 }
 
 .text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
+  font-size: 1.5rem;
 }
 
 .text-lg {
   font-size: 1.125rem;
-  line-height: 1.75rem;
+}
+
+.text-sm {
+  font-size: 0.9375rem;
+}
+
+.text-xs {
+  font-size: 0.875rem;
 }
 
 .font-bold {
@@ -737,6 +1042,16 @@ abbr[title] {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.text-primary-300 {
+  --tw-text-opacity: 1;
+  color: rgb(34 190 97 / var(--tw-text-opacity));
+}
+
+.text-gray-400 {
+  --tw-text-opacity: 1;
+  color: rgb(156 163 175 / var(--tw-text-opacity));
+}
+
 .no-underline {
   text-decoration-line: none;
 }
@@ -747,132 +1062,8 @@ abbr[title] {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-.filter {
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
-}
-
 .text-pesto-300 {
   color: #bbaf83;
-}
-
-/* base 스타일 재구성 */
-
-body {
-  background: #0f172a;
-}
-
-@media (min-width: 640px) {
-  body {
-    background: #334155;
-  }
-}
-
-@media (min-width: 768px) {
-  body {
-    background: #64748b;
-  }
-}
-
-@media (min-width: 1024px) {
-  body {
-    background: #e2e8f0;
-  }
-}
-
-/* 스타일 재사용 */
-
-.avatar-card {
-  display: flex;
-  width: 290px;
-  flex-direction: column;
-  gap: 1.5rem;
-  border-radius: 1rem;
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-  padding: 1.5rem;
-  --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
-  --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
-@media (min-width: 768px) {
-  .avatar-card {
-    display: grid;
-    width: 500px;
-    grid-template-columns: 120px 1fr;
-  }
-}
-
-.avatar-card {
-  .avatar-card__image {
-    height: 6rem;
-  }
-  .avatar-card__image {
-    width: 6rem;
-  }
-  .avatar-card__image {
-    align-self: center;
-  }
-  .avatar-card__image {
-    border-radius: 9999px;
-  }
-  .avatar-card__image:hover {
-    border-width: 4px;
-  }
-  .avatar-card__image:hover {
-    border-style: solid;
-  }
-  .avatar-card__image:hover {
-    --tw-border-opacity: 1;
-    border-color: rgb(161 98 7 / var(--tw-border-opacity));
-  }
-  .avatar-card__caption > :not([hidden]) ~ :not([hidden]) {
-    --tw-space-y-reverse: 0;
-    margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
-    margin-bottom: calc(1rem * var(--tw-space-y-reverse));
-  }
-  .avatar-card__caption {
-    /* strong {
-      @apply text-3xl text-gray-700;
-    } */
-    p {
-      font-size: 1.125rem;
-      line-height: 1.75rem;
-    }
-    a {
-      display: inline-block;
-    }
-    a {
-      font-weight: 700;
-    }
-    a {
-      --tw-text-opacity: 1;
-      color: rgb(8 145 178 / var(--tw-text-opacity));
-    }
-    a:focus {
-      border-radius: 0.125rem;
-    }
-    a:focus {
-      outline: 2px solid transparent;
-      outline-offset: 2px;
-    }
-    a:focus {
-      --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
-      --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
-      box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
-    }
-    a:focus {
-      --tw-ring-opacity: 1;
-      --tw-ring-color: rgb(161 98 7 / var(--tw-ring-opacity));
-    }
-    a:focus {
-      --tw-ring-offset-width: 2px;
-    }
-    a:active {
-      --tw-text-opacity: 1;
-      color: rgb(239 68 68 / var(--tw-text-opacity));
-    }
-  }
 }
 
 .hover\:border-4:hover {
@@ -889,7 +1080,7 @@ body {
 }
 
 .focus\:rounded-sm:focus {
-  border-radius: 0.125rem;
+  border-radius: 0.1875rem;
 }
 
 .focus\:outline-none:focus {
