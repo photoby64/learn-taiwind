@@ -11,16 +11,24 @@
     <div>
       <h1>
         <a href="/">
-          <span>네이버</span>
-          <span aria-hidden="true">N</span>
+          <span class="sr-only">네이버</span>
+          <span
+            aria-hidden="true"
+            class="text-transparent bg-clip-text bg-gradient-to-b from-red-300 via-green-300 to-yellow-300 text-4xl font-bold"
+            >N</span
+          >
         </a>
       </h1>
       <form action="/" method="get">
         <div>
-          <label for="input-1">검색어</label>
+          <label for="input-1" class="sr-only">검색어</label>
           <input type="search" id="input-1" placeholder="검색어를 입력하세요" required />
         </div>
-        <button type="submit" aria-label="검색"></button>
+        <button
+          type="submit"
+          aria-label="검색"
+          class="size-6 rounded-full border-8 border-blue-500 bg-gradient-to-b from-red-300 via-green-300 to-yellow-300 bg-transparent bg-clip-padding"
+        ></button>
       </form>
     </div>
   </body>
