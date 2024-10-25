@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko-KR">
   <head>
     <meta charset="UTF-8" />
@@ -9,19 +9,13 @@
   </head>
   <body class="flex h-screen flex-col items-center justify-center gap-8 font-suit">
     <div>
-      <button
-        type="button"
-        class="state-button size-12 bg-[url(/src/assets/face/face3.jpg)] rounded-full bg-cover state-online"
-      >
+      <button type="button" class="state-button state-online size-12 rounded-full bg-[url(/src/assets/face/face3.jpg)] bg-cover">
         <!-- 버튼 배경이미지 /src/assets/face/face3.jpg -->
         <span class="state-text"><span class="sr-only">슬비 회원 온라인</span></span>
       </button>
       <hr class="my-5" />
       <!-- 버튼 배경이미지 /src/assets/face/face5.jpg -->
-      <button
-        type="button"
-        class="state-button bg-[url('/src/assets/face/face5.jpg')] w-12 h-12 rounded-full bg-cover state-offline"
-      >
+      <button type="button" class="state-button state-offline h-12 w-12 rounded-full bg-[url('/src/assets/face/face5.jpg')] bg-cover">
         <span class="state-text"><span class="sr-only">선범 회원 오프라인</span></span>
       </button>
     </div>
